@@ -12,7 +12,7 @@ template <typename T>
 class SharedPtr {
 public:
     SharedPtr();
-    SharedPtr(T* ptr);
+    SharedPtr(T* pointer);
     SharedPtr(const SharedPtr& r);
     SharedPtr(SharedPtr&& r);
     ~SharedPtr();
@@ -26,7 +26,7 @@ public:
     
     auto get() -> T*;
     void reset();
-    void reset(T* ptr);
+    void reset(T* pointer);
     void swap(SharedPtr& r);
     // возвращает количество объектов SharedPtr, которые ссылаются на тот же управляемый объект
     auto use_count() const -> size_t;
